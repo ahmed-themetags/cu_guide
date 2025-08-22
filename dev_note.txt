@@ -1,0 +1,54 @@
+Great move, Ahmed! 🚀 Let’s prepare a Google Play Store listing draft for CU Guide so you’ll be ready to publish.
+
+📌 Play Store Listing (Draft)
+🏷️ App Title
+
+CU Guide – Chittagong University Companion
+
+✨ Short Description (80 chars max)
+
+Your all-in-one guide to Chittagong University: Shuttle, Campus & Explore.
+
+📖 Full Description (Long Description)
+
+CU Guide is the ultimate companion app for students, visitors, and travelers of Chittagong University (CU). Whether you’re catching the shuttle, exploring departments, or discovering nearby tourist spots, CU Guide keeps everything at your fingertips.
+
+🌟 Key Features:
+
+🚉 Shuttle Schedule: Stay updated with daily shuttle timings and never miss a ride.
+
+🏛️ Department Info: Learn about all CU departments, faculty details, and quick contacts.
+
+🌍 Tourist Attractions: Discover nearby travel spots, with images, distances, and map links.
+
+📰 Notices (Future Update): Access important university notices in one place.
+
+📍 Campus Map (Future Update): Navigate the CU campus easily.
+
+Designed to be simple, reliable, and student-friendly, CU Guide makes life at Chittagong University easier and more enjoyable.
+
+👉 Download now and make CU life smarter with CU Guide!
+
+🔑 Suggested Keywords (for SEO in Play Store)
+
+Chittagong University, CU Shuttle, CU Guide, CU Campus, CU App, University Bangladesh, CU Companion, Varsity App, CU Travel, CU Info
+
+📷 Screenshot Plan (What to Show in App Store Images)
+
+Splash Screen / Logo → App branding with CU Guide name.
+
+Shuttle Schedule Page → Clean timetable with icons.
+
+Department Info Page → Example of one department profile.
+
+Tourist Spots Page → List with beautiful images & maps.
+
+Extra Features (Coming Soon) → Notices, Campus Map, Cafeteria info.
+
+
+children: [
+                         Text(
+                           "Welcome to CU Guide – your all-in-one companion for exploring and navigating the University of Chittagong. 🎓✨",
+                           style: TextStyle(fontSize: 16, height: 1.5),
+                         ),
+                       ],
