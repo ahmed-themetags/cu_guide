@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
         items: const <Widget>[
           Icon(Icons.home),
           Icon(Icons.school),
-          Icon(Icons.person),
+          Icon(Icons.train),
         ],
         onTap: (index) {
           setState(() {

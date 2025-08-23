@@ -23,8 +23,9 @@ class HomeTabScreen extends StatelessWidget {
 
               SizedBox(height: 5),
 
+              // train schedule box
               SizedBox(
-                  height: 150,
+                  height: 140,
                   width: double.infinity,
                   child: Container(
                     color: Colors.green[200], //late for bg color
@@ -50,18 +51,19 @@ class HomeTabScreen extends StatelessWidget {
                                       ClipOval(
                                         child: Image.asset(
                                           schedule.imageUrl, // TODO: replace with schedule.image
-                                          width: 80,
+                                          width: 70,
                                           height: 60,
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                      const SizedBox(height: 10),
+                                      const SizedBox(height: 2),
                                       Text(
                                         schedule.title, // TODO: replace with schedule.dayType
                                         style: const TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.purple,
+                                          // color: Colors.orange,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -71,6 +73,7 @@ class HomeTabScreen extends StatelessWidget {
                                         style: const TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold,
+                                          color: Colors.black,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -87,14 +90,63 @@ class HomeTabScreen extends StatelessWidget {
                   )
               ),
 
-
               SizedBox(height: 24),
 
-              SizedBox(
-                  height: 500,
-                  child: DepartmentTabScreen()
-              ),
-          ],
+              // SizedBox(
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(8.0),
+              //     child: Text(
+              //       'Welcome to Chittagong University',
+              //       style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              //     ),
+              //
+              //   ),
+              // ),
+
+
+              SizedBox(height: 5),
+
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: const Text(
+                        "অনুষদ :",
+                        style: TextStyle(color: Colors.green,fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+
+                    const SizedBox(height: 5),
+        
+                    // Faculty cards as part of the column
+                    ListView.builder(
+                      shrinkWrap: true, // ✅ makes ListView take only needed height
+                      physics: const NeverScrollableScrollPhysics(), // ✅ let outer scroll handle it
+                      itemCount: facultyList.length,
+                      itemBuilder: (context, index) {
+                        final faculty = facultyList[index];
+                        return Card(
+                          child: ListTile(
+                            leading: Image.asset(
+                                faculty.imageUrl ?? '',
+                            ),
+                            title: Text(faculty.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold), ),
+                            subtitle: Text(faculty.shortDescription ?? ''),
+                          ),
+                        );
+                      },
+                    ),
+
+
+                  ],
+                ),
+              )
+
+
+      ],
 
 
 
