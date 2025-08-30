@@ -1,6 +1,7 @@
 import 'package:cu_guide/data/static_data.dart';
 import 'package:cu_guide/features/departments/view/department_tab_screen.dart';
 import 'package:cu_guide/features/home/widgets/slider_screen_widget.dart';
+import 'package:cu_guide/features/schedule/view/schedule_details.dart';
 import 'package:flutter/material.dart';
 
 class HomeTabScreen extends StatelessWidget {
@@ -36,49 +37,60 @@ class HomeTabScreen extends StatelessWidget {
                         children: trainScheduleList.map((schedule) {
                           return Padding(
                             padding: const EdgeInsets.only(right: 1.0), // 👈 spacing between cards
-                            child: Card(
-                              elevation: 2,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              color: Colors.green[100],
-                              child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(5.0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      ClipOval(
-                                        child: Image.asset(
-                                          schedule.imageUrl, // TODO: replace with schedule.image
-                                          width: 70,
-                                          height: 60,
-                                          fit: BoxFit.cover,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(8`),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ScheduleDetails(schedule),
+                                  ),
+                                );
+                              },
+                              child: Card(
+                                elevation: 2,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                color: Colors.green[100],
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(5.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        ClipOval(
+                                          child: Image.asset(
+                                            schedule.imageUrl, // TODO: replace with schedule.image
+                                            width: 70,
+                                            height: 60,
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 2),
-                                      Text(
-                                        schedule.title, // TODO: replace with schedule.dayType
-                                        style: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.purple,
-                                          // color: Colors.orange,
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          schedule.title, // TODO: replace with schedule.dayType
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.purple,
+                                            // color: Colors.orange,
+                                          ),
+                                          textAlign: TextAlign.center,
                                         ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      const SizedBox(height: 5),
-                                      Text(
-                                        schedule.subtitle, // TODO: replace with schedule.route
-                                        style: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black,
+                                        const SizedBox(height: 5),
+                                        Text(
+                                          schedule.subtitle, // TODO: replace with schedule.route
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                          textAlign: TextAlign.center,
                                         ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      const SizedBox(height: 8),
-                                    ],
+                                        const SizedBox(height: 8),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

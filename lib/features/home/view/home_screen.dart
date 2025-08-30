@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0; // for bottom navigation bar
 
-  // List of screens for each bottom navigation tab
+  // List o`f screens for each bottom navigation tab
   static final List<Widget> _screens = [
     HomeTabScreen(),
     DepartmentTabScreen(),

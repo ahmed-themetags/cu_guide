@@ -3,12 +3,14 @@ class Schedule {
   final String title;
   final String subtitle;
   final String imageUrl;
+  final List<String> schedules;
 
   Schedule({
     required this.id,
     required this.title,
     required this.subtitle,
     required this.imageUrl,
+    required this.schedules,
   });
 
   factory Schedule.fromJson(Map<String, dynamic> json) {
@@ -17,6 +19,7 @@ class Schedule {
       title: json['title'],
       subtitle: json['subtitle'],
       imageUrl: json['imageUrl'],
+      schedules: json['schedules'],
     );
   }
 
@@ -25,6 +28,7 @@ class Schedule {
     'title': title,
     'subtitle': subtitle,
     'imageUrl': imageUrl,
+    'schedules': schedules,
   };
 
   @override

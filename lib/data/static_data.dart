@@ -228,6 +228,18 @@ final List<Schedule> trainScheduleList = [
     // subtitle: 'Cu To Town',
     subtitle: 'ক্যাম্পাস থেকে শহর',
     imageUrl: 'assets/images/cu_04.jpg',
+    schedules: [
+      '৮:৪০ AM (ষোলোশহর)',
+      '৯:০৫ AM (ষোলোশহর)',
+      '১০:৩০ AM (ষোলোশহর)',
+      '১২:০০ PM',
+      '২:০০ PM',
+      '৩:৩০ PM',
+      '৪:২০ PM',
+      '৬:০০ PM',
+      '৮:৪০ PM',
+      '৯:২০ PM',
+    ],
   ),
   Schedule(
     id: '2',
@@ -236,6 +248,18 @@ final List<Schedule> trainScheduleList = [
     // subtitle: 'Town To Campus',
     subtitle: 'শহর থেকে ক্যাম্পাস',
     imageUrl: 'assets/images/cu_05.png',
+    schedules: [
+      '৭:১৫ AM',
+      '৭:৪০ AM',
+      '৯:৩০ AM (ষোলোশহর)',
+      '১০:১০ AM',
+      '১১:০০ AM (ষোলোশহর)',
+      '১১:৩০ AM (ষোলোশহর)',
+      '২:০০ PM',
+      '৪:০০ PM',
+      '৫:৩০ PM',
+      '৮:০০ PM',
+    ],
   ),
   Schedule(
     id: '3',
@@ -244,6 +268,11 @@ final List<Schedule> trainScheduleList = [
     // subtitle: 'Cu To Town',
     subtitle: 'ক্যাম্পাস থেকে শহর',
     imageUrl: 'assets/images/cu_04.jpg',
+    schedules: [
+      '৯:০৫ AM (ষোলোশহর)',
+      '৪:৪০ PM',
+      '৯:৪৫ PM',
+    ],
   ),
   Schedule(
     id: '4',
@@ -252,5 +281,10 @@ final List<Schedule> trainScheduleList = [
     // subtitle: 'Town To Campus',
     subtitle: 'শহর থেকে ক্যাম্পাস',
     imageUrl: 'assets/images/cu_05.png',
+    schedules: [
+      '৭:৪০ AM',
+      '৩:০০ PM',
+      '৮:৩০ PM',
+    ],
   ),
 ];
