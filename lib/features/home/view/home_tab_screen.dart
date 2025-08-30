@@ -38,7 +38,7 @@ class HomeTabScreen extends StatelessWidget {
                           return Padding(
                             padding: const EdgeInsets.only(right: 1.0), // 👈 spacing between cards
                             child: InkWell(
-                              borderRadius: BorderRadius.circular(8`),
+                              borderRadius: BorderRadius.circular(8),
                               onTap: () {
                                 Navigator.push(
                                   context,
